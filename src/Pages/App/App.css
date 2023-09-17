@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #202124;
+  --mw-documn: 1200px;
+  --text-color: #E4D7C5;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: var(--background);
+  min-height: 100vh;
+  color: var(--text-color);
+}
+
+.u-center {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.container-list {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-end;
+  align-items: center;
+  display: inline;
+}
+
+
+/* style of Characters Cards */
+
+.container-card {
+  position: relative;
+  margin: auto 10rem;
+  flex-wrap: wrap;
+  background-color: #E4D7C5;
+}
+
+.image-style{
+  min-width: 100px;
+}
+
+/* button menunav styles */
+
+.nav-button {
+  display: none;
+}
+
+/* input styles */
+
+.input-style {
+  width: 70%;
+  height: 30px;
+  margin: 0 auto;
+}
+
+
+
+@media screen and (max-width: 480px) {
+  .nav-button{
+    display: flex;
+  }
+
+  .container-list{
+    width: 100%;
+    display: none;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container-list.isActive {
+    display: flex;
+  }
+  
+}
+
