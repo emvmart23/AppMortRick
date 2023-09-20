@@ -25,6 +25,7 @@ body {
 }
 
 .u-center {
+  min-width: 320px;
   padding: 10px;
   display: flex;
   justify-content: space-between;
@@ -38,20 +39,25 @@ body {
   justify-content: flex-end;
   align-items: center;
   display: inline;
+
 }
 
 
 /* style of Characters Cards */
 
 .container-card {
+  row-gap: 2px;
+  width: 80%;
+  margin: 0 auto;
+  min-width: 170px;
   position: relative;
-  margin: auto 10rem;
-  flex-wrap: wrap;
-  background-color: #E4D7C5;
+  margin: 0 auto;
 }
 
 .image-style{
-  min-width: 100px;
+  min-width: 150px;
+  max-width: 150px;
+  margin-right: 5px;
 }
 
 /* button menunav styles */
@@ -65,10 +71,16 @@ body {
 .input-style {
   width: 70%;
   height: 30px;
-  margin: 0 auto;
+  min-width: 250px;
+  margin: 4 auto;
+  max-width: 200px;
+  
 }
 
-
+.input-style::placeholder {
+  text-align: center;
+  
+}
 
 @media screen and (max-width: 480px) {
   .nav-button{
@@ -86,6 +98,20 @@ body {
   .container-list.isActive {
     display: flex;
   }
+
+  /* .image-style{
+    max-width: 150px;
+  } */
   
+}
+
+@media screen and (min-width:768px) {
+  .input-style {
+    margin-left: 13rem;
+  }
+
+  /* .image-style{
+    min-width: 150px;
+  } */
 }
 
