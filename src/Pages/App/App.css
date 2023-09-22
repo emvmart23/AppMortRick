@@ -44,6 +44,10 @@ body {
   text-align: center;
 }
 
+.nav-logo{
+  font-size: 1.5rem;
+}
+
 .container-list.isActive {
   display: flex;
 }
@@ -51,11 +55,12 @@ body {
 /* style of Characters Cards */
 
 .container-card {
-  text-align: center;
+  
   margin-top: 30px;
   width: 80%;
   min-width: 170px;
   position: relative;
+  margin: 0 auto;
 }
 
 .image-style {
@@ -78,14 +83,16 @@ body {
   height: 35px;
   min-width: 257px;
   max-width: 300px;
-  margin: 0 auto;
+  margin-bottom: 35px;
 }
 
 .input-style::placeholder {
   text-align: center;
 }
 
-/* card info */
+.info-container {
+  margin-top: 60px;
+}
 
 @media screen and (min-width: 600px) {
   .nav-button {
@@ -105,6 +112,11 @@ body {
     font-size: 1.4rem;
   }
 
+  .nav-logo{
+    margin-left: 12px;
+    font-size: 1.7rem;
+  }
+
   .input-style {
     width: 80%;
     height: 40px;
@@ -114,7 +126,7 @@ body {
   }
 
   .image-style {
-    min-width: 180px;
+    min-width: 200px;
   }
 
   .container-card {
@@ -124,7 +136,45 @@ body {
     min-width: 190px;
     position: relative;
   }
+
+  .img-card {
+    margin-left: 20px;
+  }
 }
 
-@media screen and (max-width: 600px) {
-}
+/* @media screen and (min-width: 900px) {
+  .u-center {
+    padding: 12px;
+  }
+
+  .nav-logo{
+    margin-left: 32px;
+    font-size: 1.9rem;
+  }
+
+  .container-list {
+    width: 15%;
+    min-width: 145px;
+  }
+
+  .nav-link {
+    font-size: 1.6rem;
+  }
+
+  .image-style {
+    min-width: 240px;
+  }
+
+  .container-card {
+    text-align: center;
+    margin-top: 30px;
+    width: 90%;
+    min-width: 190px;
+    position: relative;
+  }
+
+  .img-card {
+    margin-left: 30px;
+  }
+} */
+

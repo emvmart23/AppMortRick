@@ -1,13 +1,18 @@
-import React, { useState } from 'react'
-import { Link, NavLink } from 'react-router-dom'
+import React, { useContext, useState } from 'react'
+import { NavLink } from 'react-router-dom'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/solid'
+import { CharacterPersonContex } from '../../Counter/context'
 
 const NavBar = () => {
-  const [ openMenu, setOpenMenu] = useState(false)
+
+  const { openMenu, setOpenMenu } = useContext(CharacterPersonContex) 
 
   const handleMenu = () => {
     setOpenMenu(state => !state)
   }
+
+//   const menu = document.querySelector('.')
+//   const  listLinks = document.querySelector('.container-list')
 
   const navLinks = [
     {
@@ -26,7 +31,7 @@ const NavBar = () => {
     <header className='bg-transparent w-full mb-20'>
         <nav className='u-center h-auto w-auto'>
             <div>
-                <NavLink to='/' className='text-2xl'>{'{ MAX }'}</NavLink>
+                <NavLink to='/' className='nav-logo'>{'{ MAX }'}</NavLink>
             </div>
             <button className='nav-button' onClick={() => handleMenu()}>
                 {openMenu? (

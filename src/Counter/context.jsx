@@ -5,10 +5,12 @@ export const CharacterPersonContex = createContext()
 
 export const CharacterPersonProvider = ({children}) => {
   
+  const [ openMenu, setOpenMenu] = useState(false)
   const [searchValue, setSearchValue] = useState('')
   const { character } = GetApi()
   const [selectedCharacter , setSelectedCharacter ] = useState(null)
   const [ addFavorite, setAddFavorite ] = useState([])
+  
 
   //search character
   const filtered = character.filter(item => {
@@ -19,6 +21,8 @@ export const CharacterPersonProvider = ({children}) => {
 
   return (
     <CharacterPersonContex.Provider value={{
+        openMenu,
+        setOpenMenu,
         searchValue,
         setSearchValue,
         character,
@@ -27,7 +31,6 @@ export const CharacterPersonProvider = ({children}) => {
         filtered,
         addFavorite,
         setAddFavorite,
-
     }}>
         {children}
     </CharacterPersonContex.Provider>

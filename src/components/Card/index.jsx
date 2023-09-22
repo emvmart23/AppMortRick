@@ -1,11 +1,11 @@
-import { useContext, useState } from "react";
-import { CharacterPersonContex } from "../../Counter/context";
-import { useNavigate } from "react-router-dom";
+import { useContext, useState } from 'react';
+import { CharacterPersonContex } from '../../Counter/context';
+import { useNavigate } from 'react-router-dom';
 import { StarIcon } from '@heroicons/react/24/solid'
 
 
 const Card = ({ data }) => {
-  const { setSelectedCharacter, selectedCharacter, setAddFavorite, addFavorite } = useContext(
+  const { setSelectedCharacter, setAddFavorite, addFavorite, setOpenMenu } = useContext(
     CharacterPersonContex
   );
 
@@ -13,9 +13,9 @@ const Card = ({ data }) => {
 
   const handleinfoCharacter = (content) => {
     setSelectedCharacter(content);
-    navigate("/info");
+    navigate('/info');
+    setOpenMenu(false)
   };
-
 
   //favorite character
   const favoritePerson = (event, character) => {
@@ -41,7 +41,7 @@ const Card = ({ data }) => {
   return (
     <div
       onClick={() => handleinfoCharacter(data)}
-      className='relative border border-black inline-block mb-8 p-5 rounded-xl'
+      className='relative border border-black inline-block p-5 mb-10 rounded-xl img-card'
     >
       <figure className='image-style'>
         <img className='w-full rounded-xl size-image' src={data.image} alt={data.name} />
