@@ -6,6 +6,7 @@ import Home from '../Home'
 import Favorite from '../Favorite'
 import InfoPerson from '../InfoPerson'
 
+// aqui aumenta la parte por si no esncuentra ninguna pagina
 
 const AppRoutes = () => {
     let routes = useRoutes([

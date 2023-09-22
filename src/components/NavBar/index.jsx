@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
-import MenuIcon from '@mui/icons-material/Menu';
-import CloseIcon from '@mui/icons-material/Close';
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/solid'
 
 const NavBar = () => {
   const [ openMenu, setOpenMenu] = useState(false)
@@ -9,6 +8,19 @@ const NavBar = () => {
   const handleMenu = () => {
     setOpenMenu(state => !state)
   }
+
+  const navLinks = [
+    {
+        id:1,
+        href :'/',
+        name: 'Home',
+    },
+    {
+        id:2,
+        href :'/favorite',
+        name: 'Favorite',
+    }
+  ]
 
   return (
     <header className='bg-transparent w-full mb-20'>
@@ -18,23 +30,20 @@ const NavBar = () => {
             </div>
             <button className='nav-button' onClick={() => handleMenu()}>
                 {openMenu? (
-                    <CloseIcon sx={{ width:25, height:23}}/>
+                    <XMarkIcon className='text-[#e4d7c5] w-10 h-10' />
                 ): (
-                    <MenuIcon sx={{ width:25, height:23}}/>
+                    <Bars3Icon className='text-[#e4d7c5] w-10 h-10'/>
                 )}
             </button>
             <div className={`container-list ${openMenu ? 'isActive' : ''}`}>
-                <ul className=''>
-                    <li className='m-2'>
-                        <NavLink to='/'>
-                            Home
-                        </NavLink>
-                    </li>
-                    <li className='m-2'>
-                        <NavLink to='/favorite'>
-                            Favorite
-                        </NavLink>
-                    </li>
+                <ul>
+                    {navLinks.map((item)=>(
+                        <li key={item.id} className='m-2 nav-link'>
+                            <NavLink to={item.href}>
+                                {item.name}
+                            </NavLink>
+                        </li>
+                    ))}
                 </ul>
             </div>
         </nav>

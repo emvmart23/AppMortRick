@@ -7,9 +7,8 @@ export const CharacterPersonProvider = ({children}) => {
   
   const [searchValue, setSearchValue] = useState('')
   const { character } = GetApi()
-  const [info , setInfo ] = useState(null)
-  const [dataem, setDataem] = useState(null)
-
+  const [selectedCharacter , setSelectedCharacter ] = useState(null)
+  const [ addFavorite, setAddFavorite ] = useState([])
 
   //search character
   const filtered = character.filter(item => {
@@ -18,20 +17,17 @@ export const CharacterPersonProvider = ({children}) => {
     return todoText.includes(searchText);
   })
 
-  //favorite character
-  
-
-  
   return (
     <CharacterPersonContex.Provider value={{
         searchValue,
         setSearchValue,
         character,
-        setInfo,
-        info,
-        dataem,
-        setDataem,
-        filtered
+        setSelectedCharacter,
+        selectedCharacter,
+        filtered,
+        addFavorite,
+        setAddFavorite,
+
     }}>
         {children}
     </CharacterPersonContex.Provider>

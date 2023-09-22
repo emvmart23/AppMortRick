@@ -1,35 +1,26 @@
-import React, { useContext } from 'react'
-import { useEffect, useState } from 'react'
-import TodoList from '../../components/TodoList'
-import Card from '../../components/Card'
-import SearchCharacter from '../../components/SearchCharacter'
-import { CharacterPersonContex } from '../../Counter/context'
-import MainPage from '../../components/MainPage'
+import React, { useContext } from "react";
+import { useEffect, useState } from "react";
+import TodoList from "../../components/TodoList";
+import Card from "../../components/Card";
+import SearchCharacter from "../../components/SearchCharacter";
+import { CharacterPersonContex } from "../../Counter/context";
+import Layout from "../../components/Layout";
 
-function Home () {
-
-  const {  filtered } = useContext(CharacterPersonContex)
+function Home() {
+  const { filtered } = useContext(CharacterPersonContex);
 
   return (
-    <MainPage>
-      
-      <SearchCharacter/>
+    <Layout>
+      <SearchCharacter />
 
       <TodoList>
-
-        {filtered.map(item => (
-          <Card 
-            key={item.name} 
-            data={item}
-            />
+        {filtered?.map((item) => (
+          <Card key={item.name} data={item} />
         ))}
-
       </TodoList>
-        
       
-    </MainPage>
-  )
+    </Layout>
+  );
 }
 
-export default Home
-
+export default Home;

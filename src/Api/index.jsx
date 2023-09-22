@@ -1,17 +1,16 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState } from "react";
 
 const GetApi = () => {
+  const [character, setCharacter] = useState([]);
 
-    const [ character, setCharacter ] = useState([])
-    
-    useEffect(()=> {
-        fetch('https://rickandmortyapi.com/api/character')
-        .then((response)=> response.json())
-        .then((data)=>setCharacter(data.results))
-        .catch(error => console.log(error))
-    },[])
-    
-  return { character }
-}
+  useEffect(() => {
+    fetch("https://rickandmortyapi.com/api/character")
+      .then((response) => response.json())
+      .then((data) => setCharacter(data.results))
+      .catch((error) => console.log(error));
+  }, []);
 
-export default GetApi
+  return { character };
+};
+
+export default GetApi;
