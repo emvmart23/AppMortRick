@@ -1,5 +1,4 @@
 import React from 'react'
-import '../../Pages/App/App.css'
 
 const ListCharacter = ({ children }) => {
   return (

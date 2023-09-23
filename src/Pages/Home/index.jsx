@@ -1,11 +1,7 @@
-import React, { useContext } from "react";
-import { CharacterPersonContex } from "../../Counter/context";
-import {
-  Card,
-  SearchCharacter,
-  Layout,
-  ListCharacter,
-} from "../../components/index";
+import React, { useContext } from 'react';
+import { CharacterPersonContex } from '../../Counter/context';
+import { Layout, ListCharacter } from '../../common/components/index'
+import { Card, SearchCharacter } from '../../components/index';
 
 function Home() {
   

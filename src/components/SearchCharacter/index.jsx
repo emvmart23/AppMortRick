@@ -5,7 +5,7 @@ const SearchCharacter = () => {
   const {searchValue, setSearchValue} = useContext(CharacterPersonContex)
   return (
       <input
-        className='align-center relative rounded-lg input-style'
+        className='font-mono text-center text-[#202124] relative rounded-lg input-style'
         type='text'
         value={searchValue}
         placeholder='Search Character'

@@ -11,8 +11,6 @@ export const CharacterPersonProvider = ({children}) => {
   const [selectedCharacter , setSelectedCharacter ] = useState(null)
   const [ addFavorite, setAddFavorite ] = useState([])
   
-
-  //search character
   const filtered = character.filter(item => {
     const todoText = item.name.toLocaleLowerCase();
     const searchText = searchValue.toLowerCase();

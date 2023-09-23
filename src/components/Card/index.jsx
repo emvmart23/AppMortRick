@@ -17,7 +17,6 @@ const Card = ({ data }) => {
     setOpenMenu(false)
   };
 
-  //favorite character
   const favoritePerson = (event, character) => {
     event.stopPropagation();
     setAddFavorite([...addFavorite, character]);
@@ -41,13 +40,13 @@ const Card = ({ data }) => {
   return (
     <div
       onClick={() => handleinfoCharacter(data)}
-      className='relative border border-black inline-block p-5 mb-10 rounded-xl img-card'
+      className='hover:scale-110 relative border border-black inline-block p-5 mb-10 rounded-xl img-card'
     >
       <figure className='image-style'>
         <img className='w-full rounded-xl size-image' src={data.image} alt={data.name} />
       </figure>
       <div className='text-xl flex justify-between mt-4'>
-        <span className=''>{data.name}</span>
+        <span>{data.name}</span>
         {renderIcon(data.id)}
       </div>
     </div>

@@ -4,7 +4,6 @@
 
 :root {
   --background: #202124;
-  --mw-documn: 1200px;
   --text-color: #e4d7c5;
 }
 
@@ -22,45 +21,42 @@ body {
   background-color: var(--background);
   min-height: 100vh;
   color: var(--text-color);
-  margin: 0 auto;
   scroll-behavior: smooth;
 }
 
 .u-center {
   min-width: 320px;
   padding: 9px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   flex-wrap: wrap;
+  margin-bottom: 6.5rem;
 }
 
 .container-list {
+  position: fixed;
+  margin-top: 7rem;
   width: 100%;
   display: none;
   flex-flow: column nowrap;
   justify-content: space-between;
-  align-items: center;
   text-align: center;
 }
 
-.nav-logo{
+.nav-logo {
   font-size: 1.5rem;
+  color: var(--text-color);
 }
 
 .container-list.isActive {
   display: flex;
 }
 
-/* style of Characters Cards */
-
 .container-card {
-  
   margin-top: 30px;
   width: 80%;
   min-width: 170px;
   position: relative;
   margin: 0 auto;
+  text-align: center;
 }
 
 .image-style {
@@ -70,40 +66,40 @@ body {
   min-width: 170px;
 }
 
-/* button menunav styles */
-
 .nav-button {
   display: flex;
 }
 
-/* input styles */
-
 .input-style {
   width: 80%;
-  height: 35px;
-  min-width: 257px;
+  height: 38px;
+  min-width: 245px;
   max-width: 300px;
-  margin-bottom: 35px;
-}
-
-.input-style::placeholder {
-  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 4rem;
 }
 
 .info-container {
   margin-top: 60px;
 }
 
+.card-favorite {
+  margin-left: 20px;
+}
+
 @media screen and (min-width: 600px) {
+  .u-center {
+    margin-bottom: 6rem;
+  }
   .nav-button {
     display: none;
   }
 
   .container-list {
     display: flex;
-    width: 20%;
-    align-items: center;
-    text-align: center;
+    width: 19%;
+    position: relative;
+    margin-top: 0.5rem;
   }
 
   .nav-link {
@@ -112,17 +108,17 @@ body {
     font-size: 1.4rem;
   }
 
-  .nav-logo{
+  .nav-logo {
     margin-left: 12px;
     font-size: 1.7rem;
   }
 
   .input-style {
-    width: 80%;
     height: 40px;
     max-width: 340px;
-    margin: 0 auto;
     display: block;
+    font-size: 1.5rem;
+    margin-bottom: 6rem;
   }
 
   .image-style {
@@ -130,11 +126,8 @@ body {
   }
 
   .container-card {
-    text-align: center;
-    margin-top: 30px;
     width: 90%;
     min-width: 190px;
-    position: relative;
   }
 
   .img-card {
@@ -142,12 +135,12 @@ body {
   }
 }
 
-/* @media screen and (min-width: 900px) {
+@media screen and (min-width: 900px) {
   .u-center {
     padding: 12px;
   }
 
-  .nav-logo{
+  .nav-logo {
     margin-left: 32px;
     font-size: 1.9rem;
   }
@@ -161,20 +154,25 @@ body {
     font-size: 1.6rem;
   }
 
+  .input-style {
+    width: 80%;
+    height: 42px;
+    max-width: 360px;
+    font-size: 1.8rem;
+    margin-bottom: 8rem;
+  }
+
   .image-style {
     min-width: 240px;
   }
 
   .container-card {
-    text-align: center;
     margin-top: 30px;
     width: 90%;
     min-width: 190px;
-    position: relative;
   }
 
   .img-card {
-    margin-left: 30px;
+    margin-left: 40px;
   }
-} */
-
+}

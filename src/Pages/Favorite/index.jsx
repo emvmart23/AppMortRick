@@ -1,20 +1,20 @@
 import React, { useContext} from 'react';
 import { CharacterPersonContex } from '../../Counter/context';
-import { Layout } from '../../components/index';
+import { Layout } from '../../common/components/index';
 
 const Favorite = () => {
   const { addFavorite } = useContext(CharacterPersonContex);
 
   return (
     <Layout>
-      <h1 className='mb-10 '>Characters favorites</h1>
+      <h1 className='mb-20 text-4xl'>Characters favorites</h1>
 
-      {addFavorite.map((item) => (
-        <aside key={item.id} className='border border-black inline-block mb-8 p-5 rounded-xl'>
+      {addFavorite.map((fav) => (
+        <aside key={fav.id} className='card-favorite relative border border-black inline-block mt-10 mb-8 p-5 rounded-xl'>
           <figure className='image-style'>
-            <img className='rounded-xl' src={item.image} alt={item.name} />
+            <img className='rounded-xl' src={fav.image} alt={fav.name} />
           </figure>
-          <span>{item.name}</span>
+          <span>{fav.name}</span>
         </aside>
       ))}
     </Layout>
