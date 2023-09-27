@@ -7,14 +7,14 @@ const Favorite = () => {
 
   return (
     <Layout>
-      <h1 className='mb-20 text-4xl'>Characters favorites</h1>
+      <h1 className='animate-bounce mb-20 text-4xl'>Characters favorites</h1>
 
       {addFavorite.map((fav) => (
         <aside key={fav.id} className='card-favorite relative border border-black inline-block mt-10 mb-8 p-5 rounded-xl'>
           <figure className='image-style'>
-            <img className='rounded-xl' src={fav.image} alt={fav.name} />
+            <img className='rounded-xl mb-5' src={fav.image} alt={fav.name} />
           </figure>
-          <span>{fav.name}</span>
+          <span className='text-2xl font-mono'>{fav.name}</span>
         </aside>
       ))}
     </Layout>
