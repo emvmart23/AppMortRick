@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useRef, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/solid';
 import { CharacterPersonContex } from '../../Counter/context';
@@ -17,6 +17,7 @@ const NavBar = () => {
     }
   })
   
+  
   const navLinks = [
     {
       id: 1,
@@ -28,7 +29,7 @@ const NavBar = () => {
       name: 'Favorite',
       href: '/favorite'
     },
-  ];
+  ];``
 
   return (
     <header className='bg-transparent w-full'>
